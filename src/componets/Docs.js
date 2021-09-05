@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Docs = () => {
+const Docs = () => {
     return (
         <div className='docs'>
             Welcome To Our Docs Page Below You Will Find A ListOf Code Related Doc To Help You On Your Journey
@@ -20,3 +20,5 @@ export const Docs = () => {
         </div>
     )
 }
+
+export default Docs;
