@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const About = () => {
+const About = () => {
     return (
         <div>
             Welcome To Code Hub
@@ -17,3 +17,5 @@ export const About = () => {
         </div>
     )
 }
+
+export default About;
