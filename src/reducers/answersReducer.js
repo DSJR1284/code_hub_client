@@ -1,4 +1,4 @@
-const answersReducer = (state = [], action) => {
+export const answersReducer = (state = [], action) => {
     switch(action.type){
         case 'FETCH_ANSWERS':
             return action.payload
@@ -9,4 +9,3 @@ const answersReducer = (state = [], action) => {
     }
 }
 
-export default answersReducer; 

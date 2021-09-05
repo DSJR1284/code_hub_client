@@ -1,4 +1,4 @@
-const questionsReducer = (state = [], action) => {
+ export const questionsReducer = (state = [], action) => {
     switch(action.type){
         case 'FETCH_QUESTIONS':
             return action.payload
@@ -9,4 +9,3 @@ const questionsReducer = (state = [], action) => {
     }
 }
 
-export default questionsReducer; 
