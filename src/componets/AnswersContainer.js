@@ -5,7 +5,9 @@ import { fetchAnswers } from '../actions/answersAction'
 
 class AnswersContainer extends Component {
 
-
+    componentDidMount() {
+        this.props.fetchAnswers()
+    }
 
     render() {
         return (
