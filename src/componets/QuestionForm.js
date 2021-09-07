@@ -11,10 +11,11 @@ class QuestionForm extends Component {
     }
 
     handleChange = e => {
-        const {name, value} = e.target        
-        this.setState({
-            [name]: value
-        })      
+        console.log(e.target.value)
+        // const {name, value} = e.target        
+        // this.setState({
+        //     [name]: value
+        // })      
     }
 
     handleSubmit = e => {
@@ -26,7 +27,8 @@ class QuestionForm extends Component {
         return (            
             <form onSubmit={this.handleSubmit}>                 
                 <label> Question: </label>
-                <textarea type='text' value={this.state.problem} onChange={this.handleChange} name="problem"/>
+                <textarea type='text' value={this.state.problem} onChange={this.handleChange} name="problem"/> 
+                < br />
                 <input type="hidden" defaultValue={2} onChange={this.handleChange}  name="user_id"/>            
                 <input type='submit' value="Ask A Question"/>
             </form>           
