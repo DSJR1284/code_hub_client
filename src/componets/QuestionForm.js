@@ -11,15 +11,13 @@ class QuestionForm extends Component {
     }
 
     handleChange = e => {
-        console.log(e.target.value)
-        // const {name, value} = e.target        
-        // this.setState({
-        //     [name]: value
-        // })      
+        const {name, value} = e.target        
+        this.setState({
+            [name]: value
+        })      
     }
 
     handleSubmit = e => {
-        e.preventDefault()
         this.props.addQuestion(this.state)
     }
     
