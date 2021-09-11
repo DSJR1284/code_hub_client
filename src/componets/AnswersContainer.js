@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { fetchAnswers } from '../actions/answersAction'
+import Answers from './Answers'
 
 class AnswersContainer extends Component {
 
@@ -13,6 +14,7 @@ class AnswersContainer extends Component {
         return (
             <div>
                 Answers Container
+                <Answers />
             </div>
         )
     }

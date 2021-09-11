@@ -1,17 +1,17 @@
 import React from 'react'
 import Router from './Router'
 import Nav from './Nav'
-import {Switch} from 'react-router-dom'
+// import AnswersContainer from './AnswersContainer'
 
 
 
 const App = () => {
   return (
       <div>
-          <Nav />
-          <Switch>
-            <Router />
-          </Switch>
+          <Nav /> 
+          {/* <AnswersContainer />           */}
+          <Router />
+         
       </div>
   );
 };

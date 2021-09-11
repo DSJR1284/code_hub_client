@@ -1,18 +1,40 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import AnswersContainer from './AnswersContainer'
+import AnswersForm from './AnswersForm'
 import QuestionsContainer from './QuestionsContainer'
+// import {useSelector} from 'react-redux'
 
-const Hub = ({ questions }) => {
+const Hub = ({ questions,answers }) => {
+    
+   
+    // let question = questions.map(q => q.id)
+    // let answer = answers.map(a => a.question_id)
+
+    // if(question === answer){
+    //     <AnswersContainer /> }
+    
+        
     return (
         <div>
             <QuestionsContainer />
-            {questions.map(q => <link key={q.id}>{q.problems}</link>)}
+            <ul>
+                {questions.map(q => <li key={q.id}> {q.problem} <br /> 
+                Answers: {q.answers.map(q => q.response)}
+                
+                <AnswersForm /> </li>
+                )}
+            <AnswersContainer />
+            </ul>
         </div>
     )
 }
 
 const mapStateToProps = state => {
-    return {questions: state.questions}
+    return {
+        questions: state.questions,
+        answers: state.answers
+    }
     
 }
 
